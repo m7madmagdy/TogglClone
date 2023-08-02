@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CreateTask from './screens/CreateTask';
 import Tasks from './screens/Tasks';
+import { TaskProvider } from './context/TaskContext';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -51,30 +52,32 @@ function App() {
 
   return (
     <PaperProvider theme={theme}>
-      <NavigationContainer>
-        <Stack.Navigator>
-          { userLoggedIn ? (
-            <Stack.Screen
-              name="MainScreen"
-              component={MainScreen}
-              options={{ headerShown: false }}
-            />
-          ) : (
-          <>
-            <Stack.Screen
-              name="Login"
-              component={Login}
-              options={{ headerShown: false }}
-            />
-             <Stack.Screen
-              name="MainScreen"
-              component={MainScreen}
-              options={{ headerShown: false }}
-            />
-          </>
-         )}
-        </Stack.Navigator>
-      </NavigationContainer>
+        <TaskProvider>
+          <NavigationContainer>
+            <Stack.Navigator>
+              { userLoggedIn ? (
+                <Stack.Screen
+                  name="MainScreen"
+                  component={MainScreen}
+                  options={{ headerShown: false }}
+                />
+              ) : (
+              <>
+                <Stack.Screen
+                  name="Login"
+                  component={Login}
+                  options={{ headerShown: false }}
+                />
+                 <Stack.Screen
+                  name="MainScreen"
+                  component={MainScreen}
+                  options={{ headerShown: false }}
+                />
+              </>
+             )}
+            </Stack.Navigator>
+          </NavigationContainer>
+        </TaskProvider>
     </PaperProvider>
   );
 }
