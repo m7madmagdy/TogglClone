@@ -65,10 +65,10 @@ You've successfully run and modified your React Native App. :partying_face:
 - If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
 ## Screenshots
-   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/d52747fe-fb55-4282-b4a0-1ede8f9dff4f" alt="Screenshot 1">
-   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/1f437fb0-a1de-44be-a8d6-a18b37cc4fa1" alt="Screenshot 2">
-   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/7367f4b7-67c5-45ef-b3f1-6c154fcc3145" alt="Screenshot 3">
-   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/9c0df9a7-f372-45d1-a0d8-6392b79d397f" alt="Screenshot 4">
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/6ac1453c-a96a-4888-9e16-311a7d87de2c" alt="Login">
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/47b356c6-de9b-4490-a7be-b930985fedc2" alt="Create Task">
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/0cbc6860-d89c-4ffb-abe2-45e0b7423374" alt="Tasks">
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/a067c760-67bf-4821-87f9-75671a141f09" alt="Profile">
 
 # Troubleshooting
 
