@@ -53,19 +53,26 @@ function App() {
     <PaperProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator>
-          {userLoggedIn ? (
+          { userLoggedIn ? (
             <Stack.Screen
               name="MainScreen"
               component={MainScreen}
               options={{ headerShown: false }}
             />
           ) : (
+          <>
             <Stack.Screen
               name="Login"
               component={Login}
               options={{ headerShown: false }}
             />
-          )}
+             <Stack.Screen
+              name="MainScreen"
+              component={MainScreen}
+              options={{ headerShown: false }}
+            />
+          </>
+         )}
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>
