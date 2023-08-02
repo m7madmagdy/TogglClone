@@ -64,6 +64,12 @@ You've successfully run and modified your React Native App. :partying_face:
 - If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
 - If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
+## Screenshots
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/d52747fe-fb55-4282-b4a0-1ede8f9dff4f" alt="Screenshot 1">
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/1f437fb0-a1de-44be-a8d6-a18b37cc4fa1" alt="Screenshot 2">
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/7367f4b7-67c5-45ef-b3f1-6c154fcc3145" alt="Screenshot 3">
+   <img style="width: 200px;" src="https://github.com/m7madmagdy/TogglClone/assets/52765461/9c0df9a7-f372-45d1-a0d8-6392b79d397f" alt="Screenshot 4">
+
 # Troubleshooting
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
