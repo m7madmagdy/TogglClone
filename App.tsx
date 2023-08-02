@@ -10,25 +10,32 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CreateTask from './screens/CreateTask';
 import Tasks from './screens/Tasks';
+import MainScreen from './screens/MainScreen';
 import { TaskProvider } from './context/TaskContext';
+import { Icon } from '@rneui/base';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function MainScreen() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Create Task"
-        component={CreateTask}
-      />
-      <Tab.Screen
-        name="Tasks"
-        component={Tasks}
-      />
-    </Tab.Navigator>
-  );
-}
+// function MainScreen() {
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen
+//         name="Create Task"
+//         component={CreateTask}
+//           options={{
+//                   tabBarIcon: ({ color, size }) => (
+//                     <Icon name="local-library" color={color} size={size} />
+//                   ),
+//                 }}
+//       />
+//       <Tab.Screen
+//         name="Tasks"
+//         component={Tasks}
+//       />
+//     </Tab.Navigator>
+//   );
+// }
 
 function App() {
   const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -56,11 +63,19 @@ function App() {
           <NavigationContainer>
             <Stack.Navigator>
               { userLoggedIn ? (
+                <>
                 <Stack.Screen
-                  name="MainScreen"
-                  component={MainScreen}
-                  options={{ headerShown: false }}
-                />
+                                  name="MainScreen"
+                                  component={MainScreen}
+                                  options={{ headerShown: false }}
+                                />
+
+                                 <Stack.Screen
+                                                  name="Login"
+                                                  component={Login}
+                                                  options={{ headerShown: false }}
+                                                />
+                </>
               ) : (
               <>
                 <Stack.Screen

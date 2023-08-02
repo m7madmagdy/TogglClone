@@ -28,11 +28,22 @@ const CreateTask = () => {
     setEndTime(currentTime);
   };
 
+  const formatTime = (time) => {
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    const formattedHours = hours % 12 || 12;
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+
+    return `${formattedHours}:${formattedMinutes} ${ampm}`;
+  };
+
   const isFormValid = () => {
     return taskName !== '' && taskDescription !== '';
   };
 
- const handleCreateTask = () => {
+  const handleCreateTask = () => {
     if (isFormValid()) {
       const newTask = {
         id: Date.now(),
@@ -69,14 +80,22 @@ const CreateTask = () => {
        multiline
      />
      <TouchableOpacity onPress={() => setShowStartTimePicker(true)} style={styles.timePicker}>
-       <Button style={styles.startButton} labelStyle={styles.buttonText}>Start Time: {startTime.toLocaleTimeString()}</Button>
+         <Button style={styles.startButton} labelStyle={styles.buttonText}>
+           Start Task: {formatTime(startTime)}
+         </Button>
+       </TouchableOpacity>
+       <TouchableOpacity onPress={() => setShowEndTimePicker(true)} style={styles.timePicker}>
+         <Button style={styles.endButton} labelStyle={styles.buttonText}>
+           End Task: {formatTime(endTime)}
+         </Button>
      </TouchableOpacity>
-     <TouchableOpacity onPress={() => setShowEndTimePicker(true)} style={styles.timePicker}>
-       <Button style={styles.endButton} labelStyle={styles.buttonText}>End Time: {endTime.toLocaleTimeString()}</Button>
-     </TouchableOpacity>
-     <Button style={styles.createButton} mode="contained" onPress={handleCreateTask}>
-       Create Task
-     </Button>
+      <Button
+        style={styles.createButton}
+        mode="contained"
+        onPress={handleCreateTask}
+        disabled={!isFormValid()} >
+        Create Task
+      </Button>
 
      {showStartTimePicker && (
        <DateTimePicker
@@ -99,7 +118,6 @@ const CreateTask = () => {
      )}
    </View>
  );
-
 }
 
 const styles = StyleSheet.create({
